@@ -1,6 +1,6 @@
 {
     "manifest_version": 2,
-    "name": "Dark Reader",
+    "name": "Dark Reader fork",
     "version": "4.9.42",
     "author": "Alexander Shutau",
     "description": "__MSG_extension_description__",
@@ -61,6 +61,9 @@
         },
         "switchEngine": {
             "description": "__MSG_theme_generation_mode__"
+        },
+        "restart": {
+            "description": "restart"
         }
     }
 }

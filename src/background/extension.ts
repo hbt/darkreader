@@ -275,6 +275,10 @@ export class Extension {
                 this.setTheme({engine: next});
                 break;
             }
+            case 'restart': {
+                chrome.runtime.reload();
+                break;
+            }
         }
     };
 

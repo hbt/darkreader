@@ -1,6 +1,5 @@
 if (
     document.documentElement instanceof HTMLHtmlElement &&
-    matchMedia('(prefers-color-scheme: dark)').matches &&
     !document.querySelector('.darkreader--fallback')
 ) {
     // https://github.com/darkreader/darkreader/issues/3618#issuecomment-895477598

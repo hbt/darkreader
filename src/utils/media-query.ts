@@ -5,8 +5,8 @@ const matchesMediaQuery = (query: string) => {
     return false;
 };
 
-const matchesDarkTheme = () => matchesMediaQuery('(prefers-color-scheme: dark)');
-const matchesLightTheme = () => matchesMediaQuery('(prefers-color-scheme: light)');
+const matchesDarkTheme = () => true;
+const matchesLightTheme = () => false;
 
 const isColorSchemeSupported = matchesDarkTheme() || matchesLightTheme();
 
