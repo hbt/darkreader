@@ -55,10 +55,12 @@ const shorthandVarDepPropRegexps = isSafari ? shorthandVarDependantProperties.ma
 }) : null;
 
 export function iterateCSSDeclarations(style: CSSStyleDeclaration, iterate: (property: string, value: string) => void) {
+    if (!(style instanceof CSSStyleDeclaration)) {
+        console.error("Not a style", style)
+        console.trace(style)
+        return;
+    }
     forEach(style, (property) => {
-        if(!style) {
-            return;
-        }
         const value = style.getPropertyValue(property).trim();
         if (!value) {
             return;
