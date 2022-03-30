@@ -490,7 +490,7 @@ export class VariablesStore {
 
     putRootVars(styleElement: HTMLStyleElement, theme: Theme) {
         const sheet = styleElement.sheet;
-        if (sheet.cssRules.length > 0) {
+        if (sheet && sheet.cssRules.length > 0) {
             sheet.deleteRule(0);
         }
         const declarations = new Map<string, string>();
